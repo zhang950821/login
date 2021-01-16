@@ -1,13 +1,14 @@
 package com.example.demo.dao;
 
 import com.example.demo.pojo.User;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import java.util.Map;
 
-@Repository("UM")
+@Mapper
 public interface UserMapper {
     int deleteByPrimaryKey(Integer id);
 

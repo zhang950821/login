@@ -35,6 +35,11 @@
         <property name="url" value="#{prop.url}"></property>
         <property name="username" value="#{prop.user}"></property>
         <property name="password" value="#{prop.password}"></property>
+        <property name="initialSize" value="#{prop.initsize}"></property>
+        <property name="maxActive" value="#{maxactive}"></property>
+        <property name="maxWait" value="#{maxwait}"></property>
+        <property name="minIdle" value="#{minidle}"></property>
+        <property name="maxIdle" value="#{maxidke}"></property>
     </bean>
 
     <bean class="com.example.demo.dao.UserMapper" abstract="true"></bean>

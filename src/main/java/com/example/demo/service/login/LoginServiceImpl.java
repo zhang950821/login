@@ -19,7 +19,6 @@ public class LoginServiceImpl {
 
 
     @Autowired
-    @Qualifier("UM")
     UserMapper userMapper;
 
     Logger logger= LoggerFactory.getLogger(LoginServiceImpl.class);
