@@ -23,10 +23,10 @@ public class LoginServiceImpl {
 
     Logger logger= LoggerFactory.getLogger(LoginServiceImpl.class);
 
-    public User login(int id, String password) {
+    public User login(Integer id, String password) {
 
         //检查id是否存在
-        int isExist=userMapper.checkId(id);
+        Integer isExist=userMapper.checkId(id);
         if(isExist==0){
             logger.warn("id不存在");
         }

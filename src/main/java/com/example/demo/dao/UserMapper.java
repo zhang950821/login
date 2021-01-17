@@ -24,6 +24,6 @@ public interface UserMapper {
 
     Map checkUser(@Param("id") int id, @Param("PASSWORD") String password);
 
-    int checkId(@Param("id") int id);
+    Integer checkId(@Param("id") Integer id);
 
 }
