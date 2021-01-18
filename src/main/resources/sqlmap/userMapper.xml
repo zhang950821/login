@@ -566,7 +566,7 @@
         and PASSWORD=#{PASSWORD, jdbcType=VARCHAR}
     </select>
 
-    <select id="checkId" parameterType="Integer" resultType="java.lang.Integer">
+    <select id="checkId" parameterType="java.lang.Integer" resultType="java.lang.Integer">
         select count(1)
         from user
         where id=#{id,jdbcType=INTEGER}
