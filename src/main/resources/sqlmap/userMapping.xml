@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.dao.UserMapper">
-    <resultMap id="BaseResultMap" type="com.project.data_analysis.pojo.User">
+    <resultMap id="BaseResultMap" type="com.example.demo.pojo.User">
         <constructor>
             <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
             <arg column="USERNAME" javaType="java.lang.String" jdbcType="VARCHAR" />
@@ -27,7 +27,7 @@
         delete from user
         where id = #{id,jdbcType=INTEGER}
     </delete>
-    <insert id="insert" parameterType="com.project.data_analysis.pojo.User">
+    <insert id="insert" parameterType="com.example.demo.pojo.User">
         insert into user (id, USERNAME, PASSWORD,
                           EMAIL, PHONE, QUESTION,
                           ANSWER, CREATETIME, UPDATETIME
@@ -37,7 +37,7 @@
                 #{answer,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}
                )
     </insert>
-    <insert id="insertSelective" parameterType="com.project.data_analysis.pojo.User">
+    <insert id="insertSelective" parameterType="com.example.demo.pojo.User">
         insert into user
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
@@ -98,7 +98,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.project.data_analysis.pojo.User">
+    <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.pojo.User">
         update user
         <set>
             <if test="username != null">
@@ -128,7 +128,7 @@
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.project.data_analysis.pojo.User">
+    <update id="updateByPrimaryKey" parameterType="com.example.demo.pojo.User">
         update user
         set USERNAME = #{username,jdbcType=VARCHAR},
             PASSWORD = #{password,jdbcType=VARCHAR},
@@ -140,7 +140,7 @@
             UPDATETIME = #{updatetime,jdbcType=TIMESTAMP}
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <resultMap id="BaseResultMap" type="com.project.data_analysis.pojo.User">
+    <resultMap id="BaseResultMap" type="com.example.demo.pojo.User">
         <constructor>
             <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
             <arg column="USERNAME" javaType="java.lang.String" jdbcType="VARCHAR" />
@@ -166,7 +166,7 @@
         delete from user
         where id = #{id,jdbcType=INTEGER}
     </delete>
-    <insert id="insert" parameterType="com.project.data_analysis.pojo.User">
+    <insert id="insert" parameterType="com.example.demo.pojo.User">
         insert into user (id, USERNAME, PASSWORD,
                           EMAIL, PHONE, QUESTION,
                           ANSWER, CREATETIME, UPDATETIME
@@ -176,7 +176,7 @@
                 #{answer,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}
                )
     </insert>
-    <insert id="insertSelective" parameterType="com.project.data_analysis.pojo.User">
+    <insert id="insertSelective" parameterType="com.example.demo.pojo.User">
         insert into user
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
@@ -237,7 +237,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.project.data_analysis.pojo.User">
+    <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.pojo.User">
         update user
         <set>
             <if test="username != null">
@@ -267,7 +267,7 @@
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.project.data_analysis.pojo.User">
+    <update id="updateByPrimaryKey" parameterType="com.example.demo.pojo.User">
         update user
         set USERNAME = #{username,jdbcType=VARCHAR},
             PASSWORD = #{password,jdbcType=VARCHAR},
@@ -279,7 +279,7 @@
             UPDATETIME = #{updatetime,jdbcType=TIMESTAMP}
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <resultMap id="BaseResultMap" type="com.project.data_analysis.pojo.User">
+    <resultMap id="BaseResultMap" type="com.example.demo.pojo.User">
         <constructor>
             <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
             <arg column="USERNAME" javaType="java.lang.String" jdbcType="VARCHAR" />
@@ -305,7 +305,7 @@
         delete from user
         where id = #{id,jdbcType=INTEGER}
     </delete>
-    <insert id="insert" parameterType="com.project.data_analysis.pojo.User">
+    <insert id="insert" parameterType="com.example.demo.pojo.User">
         insert into user (id, USERNAME, PASSWORD,
                           EMAIL, PHONE, QUESTION,
                           ANSWER, CREATETIME, UPDATETIME
@@ -315,7 +315,7 @@
                 #{answer,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}
                )
     </insert>
-    <insert id="insertSelective" parameterType="com.project.data_analysis.pojo.User">
+    <insert id="insertSelective" parameterType="com.example.demo.pojo.User">
         insert into user
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
@@ -376,7 +376,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.project.data_analysis.pojo.User">
+    <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.pojo.User">
         update user
         <set>
             <if test="username != null">
@@ -406,7 +406,7 @@
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.project.data_analysis.pojo.User">
+    <update id="updateByPrimaryKey" parameterType="com.example.demo.pojo.User">
         update user
         set USERNAME = #{username,jdbcType=VARCHAR},
             PASSWORD = #{password,jdbcType=VARCHAR},
@@ -418,7 +418,7 @@
             UPDATETIME = #{updatetime,jdbcType=TIMESTAMP}
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <resultMap id="BaseResultMap" type="com.project.data_analysis.pojo.User">
+    <resultMap id="BaseResultMap" type="com.example.demo.pojo.User">
         <constructor>
             <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
             <arg column="USERNAME" javaType="java.lang.String" jdbcType="VARCHAR" />
@@ -444,7 +444,7 @@
         delete from user
         where id = #{id,jdbcType=INTEGER}
     </delete>
-    <insert id="insert" parameterType="com.project.data_analysis.pojo.User">
+    <insert id="insert" parameterType="com.example.demo.pojo.User">
         insert into user (id, USERNAME, PASSWORD,
                           EMAIL, PHONE, QUESTION,
                           ANSWER, CREATETIME, UPDATETIME
@@ -454,7 +454,7 @@
                 #{answer,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}
                )
     </insert>
-    <insert id="insertSelective" parameterType="com.project.data_analysis.pojo.User">
+    <insert id="insertSelective" parameterType="com.example.demo.pojo.User">
         insert into user
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
@@ -515,7 +515,7 @@
             </if>
         </trim>
     </insert>
-    <update id="updateByPrimaryKeySelective" parameterType="com.project.data_analysis.pojo.User">
+    <update id="updateByPrimaryKeySelective" parameterType="com.example.demo.pojo.User">
         update user
         <set>
             <if test="username != null">
@@ -545,7 +545,7 @@
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
-    <update id="updateByPrimaryKey" parameterType="com.project.data_analysis.pojo.User">
+    <update id="updateByPrimaryKey" parameterType="com.example.demo.pojo.User">
         update user
         set USERNAME = #{username,jdbcType=VARCHAR},
             PASSWORD = #{password,jdbcType=VARCHAR},
