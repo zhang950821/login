@@ -7,7 +7,6 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 @SpringBootApplication
-@MapperScan("classpath:sqlmap")
 public class DemoApplication {
 
     public static void main(String[] args) {
