@@ -22,7 +22,7 @@ public interface UserMapper {
 
     int updateByPrimaryKey(User record);
 
-    Map checkUser(@Param("id") int id, @Param("PASSWORD") String password);
+    User checkUser(@Param("id") int id, @Param("PASSWORD") String password);
 
     Integer checkId(@Param("id") Integer id);
 

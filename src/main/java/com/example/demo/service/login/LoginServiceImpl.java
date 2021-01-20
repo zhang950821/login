@@ -32,12 +32,12 @@ public class LoginServiceImpl {
         }
 
         //检查id和密码是否匹配
-        Map checkedUserMap=userMapper.checkUser(id,password);
-        if(checkedUserMap==null){
+        User checkedUser=userMapper.checkUser(id,password);
+        if(checkedUser==null){
             logger.warn("用户名或密码错误");
         }
         //将userMap转化为user对象
-        User checkedUser= CommonUtils.transferMapToUser(checkedUserMap);
+//        User checkedUser= CommonUtils.transferMapToUser(checkedUserMap);
 
         //校验成功则将
         return checkedUser;
