@@ -19,10 +19,11 @@ public class LoginAction {
 
 
     @RequestMapping(value="/loginFunction", method = {RequestMethod.GET})
-    public void loginFunction(@RequestParam("id") Integer id, @RequestParam("password") String password){
+    public User loginFunction(@RequestParam("id") Integer id, @RequestParam("password") String password){
 
         User currentUser=loginService.login(id,password);
         System.out.println("登录成功");
+        return currentUser;
     }
 
 }
