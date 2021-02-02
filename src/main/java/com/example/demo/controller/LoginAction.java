@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.base.UserNotExistException;
 import com.example.demo.pojo.User;
 import com.example.demo.service.login.LoginServiceImpl;
 import org.slf4j.Logger;
@@ -22,11 +23,14 @@ public class LoginAction {
     Logger logger= LoggerFactory.getLogger(LoginAction.class);
 
     @RequestMapping(value="/loginFunction", method = {RequestMethod.GET})
-    public User loginFunction(@RequestParam("id") Integer id, @RequestParam("password") String password) throws Exception{
+    public String loginFunction(@RequestParam("id") Integer id, @RequestParam("password") String password) throws Exception{
 
         User currentUser=loginService.login(id,password);
+        if(currentUser==null){
+            return "账号或密码错误";
+        }
 
-            return currentUser;
+            return currentUser.toString();
 
     }
 
