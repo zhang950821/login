@@ -36,6 +36,9 @@ public class LoginServiceImpl {
         if(checkedUser==null){
             logger.warn("用户名或密码错误");
         }
+        else {
+            logger.info("登录成功");
+        }
         //将userMap转化为user对象
 //        User checkedUser= CommonUtils.transferMapToUser(checkedUserMap);
 
