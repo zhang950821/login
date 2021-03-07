@@ -2,6 +2,7 @@ package com.example.demo.controller;
 
 import com.example.demo.base.UserNotExistException;
 import com.example.demo.pojo.User;
+import com.example.demo.service.login.LoginService;
 import com.example.demo.service.login.LoginServiceImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value="/loginAction" ,method = {RequestMethod.GET})
 public class LoginAction {
     @Autowired
-    LoginServiceImpl loginService;
+    LoginService loginService;
 
 
     Logger logger= LoggerFactory.getLogger(LoginAction.class);
