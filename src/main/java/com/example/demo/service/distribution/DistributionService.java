@@ -1,6 +1,4 @@
-package com.example.demo.service.Distribution;
-
-import org.springframework.stereotype.Service;
+package com.example.demo.service.distribution;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.demo.service.Distribution;
+package com.example.demo.service.distribution;
 
 import com.example.demo.dao.DistributionMapper;
 import org.springframework.beans.factory.annotation.Autowired;
