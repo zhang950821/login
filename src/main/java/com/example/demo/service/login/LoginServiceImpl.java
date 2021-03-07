@@ -15,7 +15,7 @@ import java.util.Map;
 
 
 @Service
-public class LoginServiceImpl {
+public class LoginServiceImpl implements LoginService{
 
 
     @Autowired
@@ -45,4 +45,5 @@ public class LoginServiceImpl {
         //校验成功则将
         return checkedUser;
     }
+
 }

@@ -25,6 +25,7 @@ public class LoginAction {
     @RequestMapping(value="/loginFunction", method = {RequestMethod.GET})
     public String loginFunction(@RequestParam("id") Integer id, @RequestParam("password") String password) throws Exception{
 
+
         User currentUser=loginService.login(id,password);
         if(currentUser==null){
             return "账号或密码错误";
